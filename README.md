@@ -98,9 +98,7 @@ events:
   ME.CallNotifications.CALL_CONNECTED
 ```
             
-All api calls must be called only after Init function successfully returned
-
-TODO:: appId,authToken generation : steps
+All api calls must be called only after Init function successfully returned.
     
     
 ### Making call [Caller->Callee]
