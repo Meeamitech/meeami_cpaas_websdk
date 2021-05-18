@@ -1,0 +1,27 @@
+body {
+  background-color: #ecf0f1;
+}
+.registration-container {
+}
+
+.call-container {
+}
+
+#maininput {
+  background-color: #c5ccd1;
+  box-shadow: 1 1 5px rgba(0, 0, 0, 0.05), 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 20em;
+  align-items: center;
+  display: flex;
+}
+
+form {
+  width: inherit;
+}
+
+video {
+  max-width: 100%;
+  width: 320px;
+}
+

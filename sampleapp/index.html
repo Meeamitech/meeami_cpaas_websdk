@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDK Sample App</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Include files needed for SDK -->
+    <!-- <script src="./out.js"></script>  -->
+    <script src="./sdk/adapter.js"></script> 
+    <script src="./sdk/hs_ims_wrtc_sdk_if.js"></script> 
+    <script src="./sdk/hsimsweb.js"></script> 
+
+    <!-- sampleapp -->
+    <script src="./js/app.js"></script>
+  </head>
+  <body>
+    <section>
+      <input
+        type="text"
+        required
+        id="userName"
+        placeholder="userName"
+      />
+      <input
+        type="text"
+        required
+        id="password"
+        placeholder="password"
+      />
+      <button
+        type="button"
+        id="regbtn"
+	disabled
+        onclick="onRegistrationCalled()"
+      >
+        Register
+      </button>
+      <input
+        type="text"
+        required
+        id="uri"
+        placeholder="uri"
+      />
+      <button
+        type="button"
+        id="acall"
+        onclick="onCallBtnPressed(false)"
+      >
+        AudioCall
+      </button>
+      <button
+        type="button"
+        id="vcall"
+        onclick="onCallBtnPressed(true)"
+      >
+        VideoCall
+      </button>
+      <button
+        type="button"
+        id="hangupbtn"
+	disabled
+      >
+        HangUp
+      </button>
+      <div class="col-sm-6 border localvideo">
+        <video id="localVideo" autoplay playsinline muted="muted"></video>
+      </div>
+      <div class="col-sm-6 remotevideo">
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+      <p id="logging"></p>
+      <!-- sdfaasdfsf -->
+    </section>
+  </body>
+</html>
