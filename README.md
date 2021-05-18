@@ -85,6 +85,7 @@ ME.init(config)
 1. config.userName
 2. config.password
 3. config.appId
+4. [config.callsEvtCb](#callsevtcb)
 ```
 events:
   ME.CallNotifications.INCOMING_CALL
