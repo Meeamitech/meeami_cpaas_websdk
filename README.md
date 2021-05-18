@@ -82,9 +82,9 @@ ME.init(config)
 ```
 
 **Parameters:**
-1. config.appId
-2. config.authToken
-3. config.callsEvtCb  
+1. config.userName
+2. config.password
+3. config.appId
 ```
 events:
   ME.CallNotifications.INCOMING_CALL
