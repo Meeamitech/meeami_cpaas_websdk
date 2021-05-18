@@ -7,7 +7,7 @@ Using Meeami’s Web SDK involves a 4 step process.
 
 
 ## Creating Account in the web portal
-Visit https://cpaasstg.meeamitech.com/#/signup and create an account. Once account is created, login to dashboard to findProjectKeys section which will contain *PrjectID* and *ProjectSecret*. These two tokens will be used to uniquely identify your account.
+Visit https://cpaasstg.meeamitech.com/#/signup and create an account. Once account is created, login to dashboard to find *Project Keys* section which will contain *Project ID* and *Project Secret*. These two tokens will be used to uniquely identify your account.
 
 
 ## Create Users
@@ -39,8 +39,9 @@ curl -X POST \https://prov-cpaasstg.meeamitech.com/OnboardUsers\
 
 ## Download SDK files and configuring web server
 ### Download SDK:
-Copy following files from github <TODO: paste github link here> to the example folder of your web server
-  -  js/hs_ims_wrtc_sdk_if.js
+Copy following files from [this repository](./sdk) to the example folder of your web server
+  -  sdk/adapter.js
+  -  sdk/hs_ims_wrtc_sdk_if.js
   -  sdk/hsimsweb.data
   -  sdk/hsimsweb.fetch.js
   -  sdk/hsimsweb.js
@@ -48,16 +49,21 @@ Copy following files from github <TODO: paste github link here> to the example f
   -  sdk/hsimsweb.wasm
   -  sdk/hsimsweb.wasm.map
   -  sdk/hsimsweb.worker.js </br>
-In case of apache2 server copy these to /var/www/html/mewebsdk/
+
+In case of apache2 server copy these to */var/www/html/sdk*
 > Note: Make sure to copy the sdk folder as script internally fetches these files from ./sdk/ location.
 
 Web Server which is serving above files must include these two headers in the response:
 - Cross-Origin-Opener-Policy: same-origin
 - Cross-Origin-Embedder-Policy: require-corp
 
+**Configure Web server:**
 
-### Configure Web server:
-<TODO: give instructions to configure this apache2>
+**Apache2:** Add the following in httpd.conf or any other in-use configuration file.
+```
+Header set Cross-Origin-Opener-Policy same-origin
+Header set Cross-Origin-Embedder-Policy require-corp
+```
 
 Note: Make sure to use valid domain name with https; as webrtc mandates the use of https.
 
